@@ -2,18 +2,43 @@
 
 import { useState } from "react";
 import CustomInput from "../components/CustomInput";
+import toast from "react-hot-toast";
+import { headers } from "next/headers";
+import { useRouter } from "next/navigation";
 
 export default function Register() {
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
+  const [name, setName] = useState<string>("helloworld");
+  const [email, setEmail] = useState<string>("helloworld@gmail.com");
+  const [password, setPassword] = useState<string>("123456");
   const [loading, setLoading] = useState<boolean>(false);
+  const router = useRouter();
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     try{
       setLoading(true);
-      console.log(name, email, password);
+      const response = await fetch(`${process.env.API}/register`, {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        
+        body: JSON.stringify({
+          //@ts-ignore
+          name,
+          email,
+          password 
+        })
+      });
+      const data = await response.json();
+      if(!response.ok) {
+        toast.error(data.error);
+        setLoading(false);
+      } else {
+        toast.success(data.message);
+        router.push("/login");
+      }
+
     } catch (error) {
       console.log(error);
       setLoading(false);
