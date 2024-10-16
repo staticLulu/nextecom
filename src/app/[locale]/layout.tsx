@@ -1,21 +1,22 @@
 import { AbstractIntlMessages, NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 
-export default async function LocaleLayout({
+export default async function RootLayout({
   children,
+  params: { locale },
 }: {
   children: React.ReactNode;
+  params: { locale: string };
 }) {
-  const [locale, messages] = await Promise.all([getLocale(), getMessages()]);
+  const messages = await getMessages();
+
   return (
     <html lang={locale}>
       <body suppressHydrationWarning>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <div className='bg-white shadow-md top-0 fixed w-full z-20'>
-            navbar???
-          </div>
-          
-          <main className='max-w-screen-xl mx-auto p-12'>{children}</main>
+        <NextIntlClientProvider
+          messages={JSON.stringify(messages) as unknown as AbstractIntlMessages}
+        >
+          <main>{children}</main>
         </NextIntlClientProvider>
       </body>
     </html>

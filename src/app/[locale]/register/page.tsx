@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import CustomInput from "../components/CustomInput";
+import CustomInput from "../CustomInput";
 import toast from "react-hot-toast";
 import { headers } from "next/headers";
 import { useRouter } from "next/navigation";
