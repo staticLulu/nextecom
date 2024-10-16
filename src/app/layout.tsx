@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import "bootstrap-material-design/dist/css/bootstrap-material-design.min.css";
-import TopNav from "./components/TopNav";
+import TopNav from "./[locale]/components/TopNav";
 import { Toaster } from "react-hot-toast";
 
 const geistSans = localFont({

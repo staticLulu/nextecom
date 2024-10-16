@@ -1,4 +1,8 @@
+'use client'
+
 import Link from "next/link";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslations } from "next-intl";
 
 const TopNav = () => {
   return (
@@ -8,6 +12,7 @@ const TopNav = () => {
       <div className="flex gap-5">
         <Link href={"/login"} className="nav-link">Login</Link>
         <Link href={"/register"} className="nav-link">Register</Link>
+        <LanguageSwitcher/>
       </div>
     </nav>
   )
