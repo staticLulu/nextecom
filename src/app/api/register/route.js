@@ -15,8 +15,8 @@ export async function POST(req) {
     }).save();
 
     return NextResponse.json({ success: "Registered Successfully" });
-  } catch (error) {
-    console.log(error);
-    return NextResponse.json({ error: error.message }, {status: 500 });
+  } catch (err) {
+    console.log(err);
+    return NextResponse.json({ err: err.message }, {status: 500 });
   }
 }

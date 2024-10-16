@@ -12,6 +12,10 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        khmer: "noto_sans_khmer",
+        english: "noto_sans"
+      }
     },
   },
   plugins: [],

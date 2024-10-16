@@ -3,7 +3,6 @@
 import { useState } from "react";
 import CustomInput from "../CustomInput";
 import toast from "react-hot-toast";
-import { headers } from "next/headers";
 import { useRouter } from "next/navigation";
 
 export default function Register() {
@@ -24,7 +23,6 @@ export default function Register() {
         },
         
         body: JSON.stringify({
-          //@ts-ignore
           name,
           email,
           password 
@@ -32,15 +30,15 @@ export default function Register() {
       });
       const data = await response.json();
       if(!response.ok) {
-        toast.error(data.error);
+        toast.error(data.err);
         setLoading(false);
       } else {
         toast.success(data.message);
         router.push("/login");
       }
 
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      console.log(err);
       setLoading(false);
     }
   };
