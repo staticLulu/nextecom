@@ -1,7 +1,7 @@
 'use client'
 
 import { FormEvent, useState } from "react";
-import CustomInput from "../CustomInput";
+import CustomInput from "../components/CustomInput";
 import toast from "react-hot-toast";
 import { useRouter, useSearchParams } from "next/navigation";
 import { signIn } from "next-auth/react";
