@@ -1,18 +1,22 @@
 'use client'
 
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import CustomInput from "../CustomInput";
 import toast from "react-hot-toast";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { signIn } from "next-auth/react";
 
 export default function Login() {
   const [email, setEmail] = useState<string>("helloworld@gmail.com");
   const [password, setPassword] = useState<string>("123456");
   const [loading, setLoading] = useState<boolean>(false);
-  const router = useRouter();
 
-  const handleSubmit = async (e: any) => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const callbackUrl = searchParams.get("callbackUrl") || "/";
+  
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try{
       setLoading(true);
@@ -27,7 +31,7 @@ export default function Login() {
         setLoading(false);
       } else {
         toast.success("Logged in successfully");
-        router.push("/");
+        router.push(callbackUrl);
       }
     } catch (err) {
       console.log(err);

@@ -11,9 +11,9 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
- 
+
   return (
-    <html lang={"en"}>
+    <html lang="en">
       <SessionProvider>
         <body>
           <NavBar />
