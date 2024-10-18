@@ -1,52 +1,72 @@
 [
   {
+    "id": 1,
     "image": "/images/macbook-pro.png",
     "name": "MacBook Pro",
-    "price": 2499
+    "price": 2499,
+    "desc": "The MacBook Pro delivers exceptional performance with the latest M-series chips, a brilliant Retina display, and up to 18 hours of battery life, perfect for professionals and creatives."
   },
   {
+    "id": 2,
     "image": "/images/iphone-15-pro-max.png",
     "name": "iPhone 15 Pro Max",
-    "price": 1199
+    "price": 1199,
+    "desc": "The iPhone 15 Pro Max features a stunning Super Retina XDR display, A17 Bionic chip, advanced camera system with 48MP main camera, and all-day battery life."
   },
   {
+    "id": 3,
     "image": "/images/iwatch.webp",
     "name": "Apple Watch Series 9",
-    "price": 429
+    "price": 429,
+    "desc": "The Apple Watch Series 9 offers advanced health and fitness tracking, a brighter display, and new gesture controls, all in a sleek, water-resistant design."
   },
   {
+    "id": 4,
     "image": "/images/ipad.webp",
     "name": "iPad (10th Generation)",
-    "price": 449
+    "price": 449,
+    "desc": "The iPad (10th Generation) combines powerful performance with the A14 Bionic chip, a 10.9-inch Liquid Retina display, and compatibility with the Apple Pencil, ideal for work and entertainment."
   },
   {
+    "id": 5,
     "image": "/images/headphone.webp",
     "name": "Beats Studio3 Wireless Headphones",
-    "price": 349.95
+    "price": 349.95,
+    "desc": "Beats Studio3 Wireless Headphones offer premium sound quality with noise cancellation, up to 22 hours of listening time, and a comfortable over-ear design."
   },
   {
+    "id": 6,
     "image": "/images/airpod-max.png",
     "name": "AirPods Max",
-    "price": 549
+    "price": 549,
+    "desc": "AirPods Max deliver high-fidelity audio, Active Noise Cancellation, and a stunning design, offering an immersive listening experience with spatial audio support."
   },
   {
+    "id": 7,
     "image": "/images/iphone-14-pro-max.webp",
     "name": "iPhone 14 Pro Max",
-    "price": 1099
+    "price": 1099,
+    "desc": "The iPhone 14 Pro Max features a Super Retina XDR display, the powerful A16 Bionic chip, Pro camera system with 48MP main camera, and advanced safety features."
   },
   {
+    "id": 8,
     "image": "/images/ipad-air.png",
     "name": "iPad Air (5th Generation)",
-    "price": 599
+    "price": 599,
+    "desc": "The iPad Air (5th Generation) features the M1 chip, a 10.9-inch Liquid Retina display, and supports the Magic Keyboard and Apple Pencil, making it a versatile tool for productivity and creativity."
   },
   {
+    "id": 9,
     "image": "/images/airpod-pro2.jpg",
     "name": "AirPods Pro (2nd Generation)",
-    "price": 249
+    "price": 249,
+    "desc": "AirPods Pro (2nd Generation) feature Active Noise Cancellation, Transparency mode, improved sound quality, and a customizable fit for all-day comfort."
   },
   {
+    "id": 10,
     "image": "/images/mi-band-7.webp",
     "name": "Xiaomi Smart Band 7",
-    "price": 49.99
+    "price": 49.99,
+    "desc": "Xiaomi Smart Band 7 offers comprehensive fitness tracking, a vibrant AMOLED display, and a lightweight design, providing up to 14 days of battery life."
   }
 ]
