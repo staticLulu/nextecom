@@ -2,17 +2,20 @@
 
 import Image from "next/image";
 import { MouseEventHandler } from "react";
+import CustomButton from "../shared/CustomButton";
 
 const ProductCard = ({
   image, 
   name, 
   price, 
-  onClick
+  onClick,
+  buttonName
 }:{
   image: string; 
   name: string; 
   price: number; 
   onClick: MouseEventHandler<HTMLButtonElement>
+  buttonName: string;
 }) => {
   return (
     <div className="grid gap-4 rounded-2xl bg-white shadow-[0px_1px_6px_0px_rgba(0,0,0,0.08)]">
@@ -44,12 +47,8 @@ const ProductCard = ({
       <div className="border-t border-slate-100 p-4 grid gap-1">
         <h4>{name}</h4>
         <h5 className="text-sky-500 font-semibold">{`$${price}`}</h5>
-        <button 
-          className="bg-[#8E98F5] py-2 px-4 rounded-lg text-white w-fit" 
-          onClick={onClick}
-        >
-          Add to Cart
-        </button>
+
+        <CustomButton name={buttonName} onClick={onClick} />
       </div>
     </div>
   )

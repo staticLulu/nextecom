@@ -2,7 +2,7 @@
 
 import { IconButton } from '@mui/material';
 import Dialog from '@mui/material/Dialog';
-import { Fragment, MouseEventHandler } from 'react';
+import { MouseEventHandler } from 'react';
 import { MdClose } from 'react-icons/md';
 
 export default function AlertDialog({
